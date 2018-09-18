@@ -51,7 +51,8 @@ variable "consul_client_config_override" { default = "" }
 
 variable "consul_tags" {
   type    = "map"
-  default = { }
+  default = {
+"owner" = "blee" }
 }
 
 variable "consul_tags_list" {
