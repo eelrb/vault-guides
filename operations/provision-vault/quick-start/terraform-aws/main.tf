@@ -1,6 +1,6 @@
 
 resource "aws_instance" "blee-postgres" {
-  ami           = "${data.aws_ami.base.id}"
+  ami           = "ami-091b1ecddab0189e9"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${module.vault_aws.vault_sg_id}"]
   subnet_id = "subnet-0af51fba61717d58f"
