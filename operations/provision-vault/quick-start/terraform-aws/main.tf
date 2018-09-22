@@ -1,3 +1,18 @@
+
+resource "aws_instance" "blee-postgres" {
+  ami           = "${data.aws_ami.base.id}"
+  instance_type = "t2.micro"
+  vpc_security_group_ids = ["${vault_aws.module.vault_lb_aws.aws_security_group.vault_lb}"]
+  subnet_id = "subnet-0af51fba61717d58f"
+  key_name = "vault-quick-start-1f2a6c37"
+  tags {
+
+  }
+}
+
+
+
+
 data "aws_ami" "base" {
   most_recent = true
   owners      = ["${var.ami_owner}"]
