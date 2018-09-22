@@ -6,7 +6,7 @@ resource "aws_instance" "blee-postgres" {
   subnet_id = "subnet-0af51fba61717d58f"
   key_name = "vault-quick-start-1f2a6c37-20180918190731729700000002"
   tags {
-
+"Name"="blee"
   }
 }
 
